@@ -3,6 +3,7 @@ import {
   MD3LightTheme as DefaultTheme,
   PaperProvider,
 } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const theme = {
   ...DefaultTheme,
@@ -15,11 +16,13 @@ const theme = {
 
 export default function RootLayout() {
   return (
-    <PaperProvider theme={theme}>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="product/[id]" options={{ headerShown: false }} />
-      </Stack>
-    </PaperProvider>
+    <SafeAreaProvider>
+      <PaperProvider theme={theme}>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="product/[id]" options={{ headerShown: false }} />
+        </Stack>
+      </PaperProvider>
+    </SafeAreaProvider>
   );
 }
