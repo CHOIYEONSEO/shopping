@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 0,
+      "id": 1,
       "title": "유스 에브리웨어백",
       "category": "bag",
       "price": 95000,
@@ -10,11 +10,11 @@
         "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5368107/5368107_17573132012840_big.jpg?w=1200"
       ],
       "options": {
-        "colors": ["black", "green"]
+        "colors": ["블랙", "카키"]
       }
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "유스 팬츠",
       "category": "pants",
       "price": 85000,
@@ -23,18 +23,71 @@
         "https://image.msscdn.net/thumbnails/images/prd_img/20250901/5383873/detail_5383873_17570535570543_big.jpg?w=1200"
       ],
       "options": {
-        "sizes": ["small", "large"]
+        "sizes": ["s", "l"]
       }
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "유스 후드집업",
-      "category": "top",
+      "category": "outerwear",
       "price": 88000,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250901/5383782/5383782_17573128030352_big.jpg?w=1200",
         "https://image.msscdn.net/thumbnails/images/prd_img/20250901/5383782/detail_5383782_17573128135007_big.jpg?w=1200"
       ]
+    },
+    {
+      "id": 4,
+      "title": "울 블루종 자켓",
+      "category": "outerwear",
+      "price": 301500,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250812/5316786/5316786_17573888565282_big.png?w=1000",
+        "https://image.msscdn.net/thumbnails/images/prd_img/20250812/5316786/detail_5316786_17573888637451_big.png?w=1000"
+      ],
+      "options": {
+        "sizes": ["s", "m", "l"]
+      }
+    },
+    {
+      "id": 5,
+      "title": "데일리 쿨 하프 니트",
+      "category": "top",
+      "price": 29900,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250407/4992830/4992830_17455602368529_big.jpg?w=1000",
+        "https://image.msscdn.net/thumbnails/images/prd_img/20250407/4992830/detail_4992830_17441713596199_big.jpg?w=1000"
+      ],
+      "options": {
+        "colors": ["아이보리", "샌드베이지", "라이트블루", "화이트", "네이비", "블랙"]
+      }
+    },
+    {
+      "id": 6,
+      "title": "페이디드 셔츠",
+      "category": "top",
+      "price": 60900,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5371402/5371402_17564539008811_big.jpg?w=1000",
+        "https://image.msscdn.net/thumbnails/images/prd_img/20250827/5371402/detail_5371402_17564577530897_big.jpg?w=1000",
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5371400/5371400_17564538975143_big.jpg?w=1000"
+      ],
+      "options": {
+        "colors": ["차콜브라운", "블랙"]
+      }
+    },
+    {
+      "id": 7,
+      "title": "크루져 와이드 플레어 데님",
+      "category": "pants",
+      "price": 130500,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250812/5316737/5316737_17573897814933_big.png?w=1000",
+        "https://image.msscdn.net/thumbnails/images/prd_img/20250812/5316737/detail_5316737_17573897889164_big.png?w=1000"
+      ],
+      "options": {
+        "sizes": ["44", "46", "48"]
+      }
     }
   ]
 }
