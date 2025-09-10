@@ -16,11 +16,16 @@ export default function ProductsList() {
     });
   }, []);
   return (
-    <View>
-      <FlatList
-        data={products}
-        renderItem={({ item }) => <ProductCard item={item} />}
-      />
-    </View>
+    <FlatList
+      data={products}
+      numColumns={2}
+      columnWrapperStyle={{ gap: 10 }}
+      contentContainerStyle={{ gap: 10, paddingBottom: 24 }}
+      renderItem={({ item }) => (
+        <View style={{ width: "48%" }}>
+          <ProductCard item={item} />
+        </View>
+      )}
+    />
   );
 }

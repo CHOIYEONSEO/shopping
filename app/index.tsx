@@ -11,18 +11,16 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: insets.top }}>
-      <View
-        style={{
-          alignItems: "center",
-        }}
-      >
+      <View style={{ paddingHorizontal: 12, paddingBottom: 8 }}>
         <Searchbar
           placeholder="상품명 입력"
           value={search}
           onChangeText={setSearch}
         />
         <CategoryModal />
+      </View>
 
+      <View style={{ flex: 1 }}>
         <ProductsList />
       </View>
     </SafeAreaView>
