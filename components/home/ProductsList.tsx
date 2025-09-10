@@ -1,20 +1,31 @@
-import { getAllProducts } from "@/api/products";
+import { getAllProducts, getProductsByTitle } from "@/api/products";
 import { Product } from "@/types/productType";
-import { startTransition, useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { FlatList, View } from "react-native";
 import ProductCard from "./ProductCard";
 
-export default function ProductsList() {
+export default function ProductsList({ search }: { search: string }) {
   const [products, setProducts] = useState<Product[]>();
+  const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
     startTransition(async () => {
-      const data = await getAllProducts();
-      if (data) {
-        setProducts(data);
+      if (search?.trim()) {
+        const data = await getProductsByTitle(search.trim());
+        if (data) {
+          setProducts(data);
+          console.log(data);
+        }
+      } else {
+        const data = await getAllProducts();
+        if (data) {
+          setProducts(data);
+          console.log(data);
+        }
       }
     });
-  }, []);
+  }, [search]);
+
   return (
     <FlatList
       data={products}
