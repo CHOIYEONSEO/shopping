@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "유스 에브리웨어백",
-      "category": "bag",
+      "category": "가방",
       "price": 95000,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5368077/5368077_17573133174645_big.jpg?w=1200",
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "title": "유스 팬츠",
-      "category": "pants",
+      "category": "바지",
       "price": 85000,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250901/5383873/5383873_17570535489848_big.jpg?w=1200",
@@ -29,7 +29,7 @@
     {
       "id": 3,
       "title": "유스 후드집업",
-      "category": "outerwear",
+      "category": "아우터",
       "price": 88000,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250901/5383782/5383782_17573128030352_big.jpg?w=1200",
@@ -39,7 +39,7 @@
     {
       "id": 4,
       "title": "울 블루종 자켓",
-      "category": "outerwear",
+      "category": "아우터",
       "price": 301500,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250812/5316786/5316786_17573888565282_big.png?w=1000",
@@ -52,7 +52,7 @@
     {
       "id": 5,
       "title": "데일리 쿨 하프 니트",
-      "category": "top",
+      "category": "상의",
       "price": 29900,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250407/4992830/4992830_17455602368529_big.jpg?w=1000",
@@ -65,7 +65,7 @@
     {
       "id": 6,
       "title": "페이디드 셔츠",
-      "category": "top",
+      "category": "상의",
       "price": 60900,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5371402/5371402_17564539008811_big.jpg?w=1000",
@@ -79,7 +79,7 @@
     {
       "id": 7,
       "title": "크루져 와이드 플레어 데님",
-      "category": "pants",
+      "category": "바지",
       "price": 130500,
       "images": [
         "https://image.msscdn.net/thumbnails/images/goods_img/20250812/5316737/5316737_17573897814933_big.png?w=1000",
