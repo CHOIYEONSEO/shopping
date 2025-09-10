@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "title": "유스 에브리웨어백",
+      "category": "bag",
+      "price": 95000,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5368077/5368077_17573133174645_big.jpg?w=1200",
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250827/5368107/5368107_17573132012840_big.jpg?w=1200"
+      ],
+      "options": {
+        "colors": ["black", "green"]
+      }
+    },
+    {
+      "id": 1,
+      "title": "유스 팬츠",
+      "category": "pants",
+      "price": 85000,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250901/5383873/5383873_17570535489848_big.jpg?w=1200",
+        "https://image.msscdn.net/thumbnails/images/prd_img/20250901/5383873/detail_5383873_17570535570543_big.jpg?w=1200"
+      ],
+      "options": {
+        "sizes": ["small", "large"]
+      }
+    },
+    {
+      "id": 2,
+      "title": "유스 후드집업",
+      "category": "top",
+      "price": 88000,
+      "images": [
+        "https://image.msscdn.net/thumbnails/images/goods_img/20250901/5383782/5383782_17573128030352_big.jpg?w=1200",
+        "https://image.msscdn.net/thumbnails/images/prd_img/20250901/5383782/detail_5383782_17573128135007_big.jpg?w=1200"
+      ]
+    }
+  ]
+}

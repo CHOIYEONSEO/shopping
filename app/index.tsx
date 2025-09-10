@@ -1,5 +1,7 @@
+import CategoryModal from "@/components/home/CategoryModal";
+import ProductsList from "@/components/home/ProductsList";
 import { useState } from "react";
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -19,7 +21,9 @@ export default function HomeScreen() {
           value={search}
           onChangeText={setSearch}
         />
-        <Text>Edit app/index.tsx to edit this screen.</Text>
+        <CategoryModal />
+
+        <ProductsList />
       </View>
     </SafeAreaView>
   );
