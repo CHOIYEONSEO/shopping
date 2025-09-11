@@ -35,9 +35,10 @@ export default function CategoryBox({
     <View
       style={{
         flexDirection: "row",
+        flexWrap: "wrap",
         paddingTop: 5,
         gap: 3,
-        alignItems: "center",
+        alignItems: "flex-start",
       }}
     >
       {categories.map((category) => (

@@ -37,11 +37,21 @@ export default function HomeScreen() {
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "flex-start",
           }}
         >
-          <CategoryBox filter={categories} onChangeFilter={setCategories} />
-          <SortButton sortkey={sortkey} setSortkey={setSortkey} />
+          <View style={{ width: "82%" }}>
+            <CategoryBox filter={categories} onChangeFilter={setCategories} />
+          </View>
+
+          <View
+            style={{
+              width: "10%",
+              alignItems: "flex-end",
+            }}
+          >
+            <SortButton sortkey={sortkey} setSortkey={setSortkey} />
+          </View>
         </View>
       </View>
 
