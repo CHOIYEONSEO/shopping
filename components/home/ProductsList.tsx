@@ -1,5 +1,6 @@
 import { getAllProducts } from "@/api/products";
 import { Product } from "@/types/productType";
+import { Sortkey } from "@/types/sortkeyType";
 import { useEffect, useState, useTransition } from "react";
 import { FlatList, View } from "react-native";
 import ProductCard from "./ProductCard";
@@ -7,9 +8,11 @@ import ProductCard from "./ProductCard";
 export default function ProductsList({
   search,
   categories,
+  sortkey,
 }: {
   search: string;
   categories: string[];
+  sortkey: Sortkey;
 }) {
   const [products, setProducts] = useState<Product[]>();
   const [isPending, startTransition] = useTransition();
@@ -20,13 +23,14 @@ export default function ProductsList({
         search: search?.trim() || undefined,
         categories:
           categories && categories.length > 0 ? categories : undefined,
+        sortkey,
       });
 
       if (data) {
         setProducts(data);
       }
     });
-  }, [search, categories]);
+  }, [search, categories, sortkey]);
 
   return (
     <FlatList

@@ -32,7 +32,14 @@ export default function CategoryBox({
   };
 
   return (
-    <View style={{ flexDirection: "row", paddingTop: 5, gap: 3 }}>
+    <View
+      style={{
+        flexDirection: "row",
+        paddingTop: 5,
+        gap: 3,
+        alignItems: "center",
+      }}
+    >
       {categories.map((category) => (
         <Chip
           key={category}

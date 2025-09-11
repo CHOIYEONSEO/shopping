@@ -1,9 +1,11 @@
 import { Product } from "@/types/productType";
+import { Sortkey } from "@/types/sortkeyType";
 import { axiosInstance } from "./axiosInstance";
 
 export const getAllProducts = async (options?: {
   search?: string;
   categories?: string[];
+  sortkey?: Sortkey;
 }) => {
   try {
     const params: any = {};
@@ -14,6 +16,20 @@ export const getAllProducts = async (options?: {
 
     if (options?.categories && options.categories.length > 0) {
       params.category_like = options.categories.join("|");
+    }
+
+    switch(options?.sortkey) {
+      case "price_asc" :
+        params._sort = "price";
+        params._order = "asc";
+        break;
+      case "price_desc" :
+        params._sort = "price";
+        params._order = "desc";
+        break;
+      default:
+        params._sort = "id";
+        params._order = "desc";
     }
 
     const response = await axiosInstance.get<Product[]>('/products', {params});

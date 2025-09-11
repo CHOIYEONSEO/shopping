@@ -1,5 +1,7 @@
 import CategoryBox from "@/components/home/CategoryBox";
 import ProductsList from "@/components/home/ProductsList";
+import SortButton from "@/components/home/SortButton";
+import { Sortkey } from "@/types/sortkeyType";
 import { useEffect, useState } from "react";
 import { SafeAreaView, View } from "react-native";
 import { Searchbar } from "react-native-paper";
@@ -10,6 +12,7 @@ export default function HomeScreen() {
   const [input, setInput] = useState("");
   const [search, setSearch] = useState("");
   const [categories, setCategories] = useState<string[]>([]);
+  const [sortkey, setSortkey] = useState<Sortkey>("latest");
 
   useEffect(() => {
     const timer = setTimeout(() => setSearch(input), 300);
@@ -30,13 +33,24 @@ export default function HomeScreen() {
           value={input}
           onChangeText={setInput}
         />
-        <View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <CategoryBox filter={categories} onChangeFilter={setCategories} />
+          <SortButton sortkey={sortkey} setSortkey={setSortkey} />
         </View>
       </View>
 
       <View style={{ flex: 1 }}>
-        <ProductsList search={search} categories={categories} />
+        <ProductsList
+          search={search}
+          categories={categories}
+          sortkey={sortkey}
+        />
       </View>
     </SafeAreaView>
   );
