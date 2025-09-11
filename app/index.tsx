@@ -1,4 +1,4 @@
-import CategoryModal from "@/components/home/CategoryModal";
+import CategoryBox from "@/components/home/CategoryBox";
 import ProductsList from "@/components/home/ProductsList";
 import { useEffect, useState } from "react";
 import { SafeAreaView, View } from "react-native";
@@ -9,14 +9,11 @@ export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const [input, setInput] = useState("");
   const [search, setSearch] = useState("");
+  const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setSearch(input);
-    }, 300);
-    return () => {
-      clearTimeout(timer);
-    };
+    const timer = setTimeout(() => setSearch(input), 300);
+    return () => clearTimeout(timer);
   }, [input]);
 
   useEffect(() => {
@@ -33,11 +30,13 @@ export default function HomeScreen() {
           value={input}
           onChangeText={setInput}
         />
-        <CategoryModal />
+        <View>
+          <CategoryBox filter={categories} onChangeFilter={setCategories} />
+        </View>
       </View>
 
       <View style={{ flex: 1 }}>
-        <ProductsList search={search} />
+        <ProductsList search={search} categories={categories} />
       </View>
     </SafeAreaView>
   );
