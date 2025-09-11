@@ -22,6 +22,16 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start --go --tunnel
    ```
 
+   after change .env or if you have to remove cache, using `-c` option
+
+   ```bash
+   npx expo start -c
+
+   or
+
+   npx expo start --go --tunnel -c
+   ```
+
 3. Start the json-server
    ```bash
    npm run mock
