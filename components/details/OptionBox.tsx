@@ -24,6 +24,8 @@ export default function OptionBox({
         buttons={options.map((option) => ({
           value: option,
           label: option,
+          labelStyle: { fontSize: 12 },
+          style: { minWidth: 100 },
         }))}
         density="small"
       />
