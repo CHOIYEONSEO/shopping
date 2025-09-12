@@ -15,7 +15,11 @@ export default function ProductCard({ item }: { item: Product }) {
       onPress={() => router.push(`/product/${item.id}`)}
       style={{ flex: 1, height: cardHeight }}
     >
-      <Card.Cover source={{ uri: item.images[0] }} resizeMode="contain" />
+      <Card.Cover
+        source={{ uri: item.images[0] }}
+        resizeMode="contain"
+        style={{ maxHeight: 160 }}
+      />
       <Card.Title title={item.title} subtitle={item.category} />
       <Card.Content>
         <Text variant="labelLarge">{`${item.price.toLocaleString()}원`}</Text>
