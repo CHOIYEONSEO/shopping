@@ -1,10 +1,10 @@
 import { getProductById } from "@/api/products";
+import DetailsBox from "@/components/details/DetailsBox";
 import ImageGallerySwiper from "@/components/details/ImageGallerySwiper";
 import { Product } from "@/types/productType";
 import { useLocalSearchParams } from "expo-router";
 import { startTransition, useEffect, useState } from "react";
 import { SafeAreaView, ScrollView } from "react-native";
-import { useTheme } from "react-native-paper";
 
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -12,7 +12,6 @@ export default function DetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const insets = useSafeAreaInsets();
   const [details, setDetails] = useState<Product | null>(null);
-  const theme = useTheme();
 
   useEffect(() => {
     startTransition(async () => {
@@ -30,6 +29,7 @@ export default function DetailScreen() {
         {details && (
           <>
             <ImageGallerySwiper images={details.images} />
+            <DetailsBox details={details} />
           </>
         )}
       </ScrollView>
