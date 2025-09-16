@@ -1,10 +1,10 @@
-# Welcome to your Expo app 👋
+# Welcome to the Shopping Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
-0. Crate .env file or set `EXPO_PUBLIC_PC_LOCAL_IP` variable in .env
+0. Crate `.env` file or set `EXPO_PUBLIC_PC_LOCAL_IP` variable in `.env`
 
    <br/>
 
@@ -18,12 +18,14 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
    <br/>
 
-   then, find IPv4 address (ex. 190.X.X.X) and set its value to the `EXPO_PUBLIC_PC_LOCAL_IP` variable.
+   then, find IPv4 address (ex. `190.X.X.X`) and set its value to the `EXPO_PUBLIC_PC_LOCAL_IP` variable.
 
    ```bash
    #.env
    EXPO_PUBLIC_PC_LOCAL_IP=190.X.X.X
    ```
+
+   > ⚠️ Do not enter `;` at the end
 
    <br/>
 
@@ -49,7 +51,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
    <br/>
 
-   after change .env or if you have to remove cache, using `-c` option
+   after change `.env` or if you have to remove cache, using `-c` option
 
    ```bash
    npx expo start -c
@@ -76,26 +78,29 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Tech Stack
 
-When you're ready, run:
+- <img src="https://img.shields.io/badge/expo-1C2024?style=for-the-badge&logo=expo&logoColor=white">
 
-```bash
-npm run reset-project
-```
+- React Navigation (Stack)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white">
 
-## Learn more
+- React Native Paper
 
-To learn more about developing your project with Expo, look at the following resources:
+## Main Feature
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Home (product list)
 
-## Join the community
+- Product list view (API integration)
+- Search (debounce)
+- Category filter
+- price sorting
 
-Join our community of developers creating universal apps.
+<br/>
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Product details
+
+- Image gallery (slide)
+- Option selection (e.g. color/size)
+- Add to cart button
