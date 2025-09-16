@@ -4,23 +4,50 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
+0. Crate .env file or set `EXPO_PUBLIC_PC_LOCAL_IP` variable in .env
+
+   <br/>
+
+   if you want to find `EXPO_PUBLIC_PC_LOCAL_IP`,
+
+   in cmd
+
+   ```bash
+   ipconfig
+   ```
+
+   <br/>
+
+   then, find IPv4 address (ex. 190.X.X.X) and set its value to the `EXPO_PUBLIC_PC_LOCAL_IP` variable.
+
+   ```bash
+   #.env
+   EXPO_PUBLIC_PC_LOCAL_IP=190.X.X.X
+   ```
+
+   <br/>
+
 1. Install dependencies
 
    ```bash
    npm install
    ```
 
+   <br/>
+
 2. Start the app
 
    ```bash
+   # default, for android studio
    npx expo start
    ```
 
-   for expo go
-
    ```bash
+   # for expo go
    npx expo start --go --tunnel
    ```
+
+   <br/>
 
    after change .env or if you have to remove cache, using `-c` option
 
@@ -32,10 +59,13 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start --go --tunnel -c
    ```
 
+   <br/>
+
 3. Start the json-server
    ```bash
    npm run mock
    ```
+   <br/>
 
 In the output, you'll find options to open the app in a
 
