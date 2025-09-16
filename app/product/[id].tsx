@@ -6,10 +6,13 @@ import OptionContainer from "@/components/details/OptionContainer";
 import { Product } from "@/types/productType";
 import { useLocalSearchParams } from "expo-router";
 import { startTransition, useEffect, useState } from "react";
-import { SafeAreaView, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { FAB, Snackbar } from "react-native-paper";
 
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 
 export default function DetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
